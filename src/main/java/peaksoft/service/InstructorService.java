@@ -5,14 +5,16 @@ import org.springframework.security.crypto.bcrypt.BCryptPasswordEncoder;
 import org.springframework.stereotype.Service;
 import peaksoft.dto.requests.InstructorAssignRequest;
 import peaksoft.dto.requests.InstructorRequest;
-import peaksoft.dto.responses.InstructorResponse;
-import peaksoft.dto.responses.SimpleResponse;
-import peaksoft.entity.*;
+import peaksoft.responses.InstructorResponse;
+import peaksoft.responses.SimpleResponse;
+import peaksoft.entity.Company;
+import peaksoft.entity.Course;
+import peaksoft.entity.Instructor;
+import peaksoft.entity.User;
 import peaksoft.exceptions.NotFoundException;
 import peaksoft.repository.CompanyRepository;
 import peaksoft.repository.CourseRepository;
 import peaksoft.repository.InstructorRepository;
-import peaksoft.repository.RoleRepository;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -24,7 +26,7 @@ public class InstructorService {
     private final CompanyRepository companyRepository;
     private final CourseRepository courseRepository;
     private final BCryptPasswordEncoder passwordEncoder;
-    private final RoleRepository roleRepository;
+//    private final RoleRepository roleRepository;
 
     public InstructorResponse saveInstructor(InstructorRequest instructorRequest) {
         Instructor instructor = mapToEntity(instructorRequest);
@@ -36,8 +38,8 @@ public class InstructorService {
         user.setFirstName(instructorRequest.getFirstName());
         user.setEmail(instructorRequest.getEmail());
         user.setPassword(passwordEncoder.encode(instructorRequest.getPassword()));
-        List<Role> roles = roleRepository.findRoleByRoleName("INSTRUCTOR");
-        user.setRoles(roles);
+//        List<Role> roles = roleRepository.findRoleByRoleName("INSTRUCTOR");
+//        user.setRoles(roles);
         instructor.setUser(user);
         instructorRepository.save(instructor);
         return mapToView(instructor);

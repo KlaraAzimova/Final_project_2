@@ -7,7 +7,7 @@ import org.springframework.data.domain.Sort;
 import org.springframework.stereotype.Service;
 import peaksoft.dto.requests.CourseRequest;
 import peaksoft.dto.responseView.CourseResponseView;
-import peaksoft.dto.responses.CourseResponse;
+import peaksoft.responses.CourseResponse;
 import peaksoft.entity.Company;
 import peaksoft.entity.Course;
 import peaksoft.exceptions.NotFoundException;

@@ -2,7 +2,7 @@ package peaksoft.dto.responseView;
 
 import lombok.Getter;
 import lombok.Setter;
-import peaksoft.dto.responses.VideoResponse;
+import peaksoft.responses.VideoResponse;
 
 import java.util.List;
 

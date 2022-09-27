@@ -1,4 +1,4 @@
-package peaksoft.dto.responses;
+package peaksoft.responses;
 
 import lombok.Getter;
 import lombok.Setter;

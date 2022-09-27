@@ -1,4 +1,4 @@
-package peaksoft.dto.responses;
+package peaksoft.responses;
 
 import lombok.Builder;
 import lombok.Getter;
@@ -14,5 +14,6 @@ public class UserResponse {
     private String email;
     private LocalDateTime created;
     private boolean isActive;
+
 }
 

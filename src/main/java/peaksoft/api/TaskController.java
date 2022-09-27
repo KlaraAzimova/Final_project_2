@@ -4,8 +4,8 @@ import lombok.RequiredArgsConstructor;
 import org.springframework.security.access.prepost.PreAuthorize;
 import org.springframework.web.bind.annotation.*;
 import peaksoft.dto.requests.TaskRequest;
-import peaksoft.dto.responses.SimpleResponse;
-import peaksoft.dto.responses.TaskResponse;
+import peaksoft.responses.SimpleResponse;
+import peaksoft.responses.TaskResponse;
 import peaksoft.service.TaskService;
 
 import java.util.List;

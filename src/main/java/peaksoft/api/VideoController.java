@@ -4,8 +4,8 @@ import lombok.RequiredArgsConstructor;
 import org.springframework.security.access.prepost.PreAuthorize;
 import org.springframework.web.bind.annotation.*;
 import peaksoft.dto.requests.VideoRequest;
-import peaksoft.dto.responses.SimpleResponse;
-import peaksoft.dto.responses.VideoResponse;
+import peaksoft.responses.SimpleResponse;
+import peaksoft.responses.VideoResponse;
 import peaksoft.service.VideoService;
 
 import java.util.List;

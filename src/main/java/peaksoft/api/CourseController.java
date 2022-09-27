@@ -5,7 +5,7 @@ import org.springframework.security.access.prepost.PreAuthorize;
 import org.springframework.web.bind.annotation.*;
 import peaksoft.dto.requests.CourseRequest;
 import peaksoft.dto.responseView.CourseResponseView;
-import peaksoft.dto.responses.CourseResponse;
+import peaksoft.responses.CourseResponse;
 import peaksoft.service.CourseService;
 
 import java.util.List;

@@ -5,13 +5,16 @@ import org.springframework.security.crypto.bcrypt.BCryptPasswordEncoder;
 import org.springframework.stereotype.Service;
 import peaksoft.dto.requests.StudentAssignRequest;
 import peaksoft.dto.requests.StudentRequest;
-import peaksoft.dto.responses.SimpleResponse;
-import peaksoft.dto.responses.StudentResponse;
-import peaksoft.entity.*;
+import peaksoft.responses.SimpleResponse;
+import peaksoft.responses.StudentResponse;
+import peaksoft.entity.Company;
+import peaksoft.entity.Course;
+import peaksoft.entity.Student;
+import peaksoft.entity.User;
 import peaksoft.exceptions.NotFoundException;
 import peaksoft.repository.CompanyRepository;
 import peaksoft.repository.CourseRepository;
-import peaksoft.repository.RoleRepository;
+
 import peaksoft.repository.StudentRepository;
 
 import java.time.LocalDate;
@@ -24,7 +27,7 @@ public class StudentService {
     private final StudentRepository studentRepository;
     private final CompanyRepository companyRepository;
     private final BCryptPasswordEncoder passwordEncoder;
-    private final RoleRepository roleRepository;
+
     private final CourseRepository courseRepository;
 
     public StudentResponse saveStudent(StudentRequest studentRequest) {
@@ -39,8 +42,8 @@ public class StudentService {
         user.setFirstName(studentRequest.getFirstName());
         user.setEmail(studentRequest.getEmail());
         user.setPassword(passwordEncoder.encode(studentRequest.getPassword()));
-        List<Role> roles = roleRepository.findRoleByRoleName("STUDENT");
-        user.setRoles(roles);
+//        List<Role> roles = findRoleByRoleName("STUDENT");
+//        user.setRoles(roles);
         student.setUser(user);
         studentRepository.save(student);
         return mapToView(student);

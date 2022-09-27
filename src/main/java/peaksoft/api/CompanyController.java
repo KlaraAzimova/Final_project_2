@@ -6,8 +6,8 @@ import org.springframework.security.access.prepost.PreAuthorize;
 import org.springframework.web.bind.annotation.*;
 import peaksoft.dto.requests.CompanyRequest;
 import peaksoft.dto.responseView.CompanyResponseView;
-import peaksoft.dto.responses.CompanyResponse;
-import peaksoft.dto.responses.SimpleResponse;
+import peaksoft.responses.CompanyResponse;
+import peaksoft.responses.SimpleResponse;
 import peaksoft.service.CompanyService;
 
 import java.util.List;

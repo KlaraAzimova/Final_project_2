@@ -5,7 +5,7 @@ import org.springframework.web.bind.annotation.ExceptionHandler;
 import org.springframework.web.bind.annotation.ResponseStatus;
 import org.springframework.web.bind.annotation.RestControllerAdvice;
 import org.webjars.NotFoundException;
-import peaksoft.dto.responses.ExceptionResponse;
+import peaksoft.responses.ExceptionResponse;
 
 @RestControllerAdvice
 public class GlobalExceptionHandler {

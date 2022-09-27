@@ -4,8 +4,8 @@ import lombok.RequiredArgsConstructor;
 import org.springframework.security.access.prepost.PreAuthorize;
 import org.springframework.web.bind.annotation.*;
 import peaksoft.dto.requests.LessonRequest;
-import peaksoft.dto.responses.LessonResponse;
-import peaksoft.dto.responses.SimpleResponse;
+import peaksoft.responses.LessonResponse;
+import peaksoft.responses.SimpleResponse;
 import peaksoft.service.LessonService;
 
 import java.util.List;
