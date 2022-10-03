@@ -1,6 +1,7 @@
 package peaksoft.api;
 
 import lombok.RequiredArgsConstructor;
+import org.springframework.security.access.prepost.PreAuthorize;
 import org.springframework.web.bind.annotation.*;
 import peaksoft.dto.requests.UserRoleRequest;
 import peaksoft.responses.SimpleResponse;
@@ -9,7 +10,7 @@ import peaksoft.service.UserService;
 @RestController
 @RequiredArgsConstructor
 @RequestMapping("/api/admin")
-//@PreAuthorize("hasAuthority('ADMIN')")
+@PreAuthorize("hasAuthority('ADMIN')")
 public class AdminController {
 
     private final UserService userService;

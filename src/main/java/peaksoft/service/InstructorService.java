@@ -38,8 +38,6 @@ public class InstructorService {
         user.setFirstName(instructorRequest.getFirstName());
         user.setEmail(instructorRequest.getEmail());
         user.setPassword(passwordEncoder.encode(instructorRequest.getPassword()));
-//        List<Role> roles = roleRepository.findRoleByRoleName("INSTRUCTOR");
-//        user.setRoles(roles);
         instructor.setUser(user);
         instructorRepository.save(instructor);
         return mapToView(instructor);

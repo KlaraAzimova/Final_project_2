@@ -25,7 +25,6 @@ public class UserService implements UserDetailsService {
 
     private final JwtTokenUtil util;
 
-    //    private final PasswordEncoder passwordEncoder;
     public RegisterResponse create(RegisterRequest registerRequest) {
         User user = mapToEntity(registerRequest);
         user.setPassword(passwordEncoder.encode(registerRequest.getPassword()));

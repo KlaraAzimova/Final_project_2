@@ -42,8 +42,6 @@ public class StudentService {
         user.setFirstName(studentRequest.getFirstName());
         user.setEmail(studentRequest.getEmail());
         user.setPassword(passwordEncoder.encode(studentRequest.getPassword()));
-//        List<Role> roles = findRoleByRoleName("STUDENT");
-//        user.setRoles(roles);
         student.setUser(user);
         studentRepository.save(student);
         return mapToView(student);
